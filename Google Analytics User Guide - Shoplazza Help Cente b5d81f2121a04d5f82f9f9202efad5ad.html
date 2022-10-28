@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Google Analytics User Guide - Shoplazza Help Center</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b5d81f21-21a0-4d5f-82f9-f9202efad5ad" class="page sans"><header><img class="page-cover-image" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/How-Google-Analytics-can-Help-your-Business.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Shoplazza_logo.png"/></div><h1 class="page-title">Google Analytics User Guide - Shoplazza Help Center</h1></header><div class="page-body"><p id="626e671a-944b-4e60-8b28-bdeafd2340c9" class="">Google Analytics is the enterprise-class web analytics solution that gives you rich insight into your website traffic and marketing effectiveness. Its powerful, flexible, and easy-to-use features now let you see and analyze your data in an entirely new way. Google Analytics can be incredibly useful in boosting your business and informing your marketing strategy. </p><p id="f4c97f99-e105-4603-b6bb-195edd7cb581" class="">Although Google Analytics is an incredible tool for businesses of all sizes, its many complicated terms and metrics can make it difficult to understand. Using this guide, you will learn what Google Analytics is, how to set up a Google Analytics account, and what some of the most important metrics and terms are.</p><h1 id="aae5e6f7-6a7c-4bbe-b85f-666e7a71d13c" class=""><strong>What is Google Analytics?</strong></h1><p id="e45fbb71-7d59-4cfc-b569-472c019f5970" class="">Google Analytics (GA) is a cloud-based analytics tool that helps you track visitors and conversions on your store. Using this tool, you can better understand your visitors&#x27; behavior, such as what pages they&#x27;re most likely to visit, what channels drive the most traffic to your store, and what products they&#x27;re most likely to buy.</p><p id="26e8e600-67f1-4d49-a388-f7a21a1469dd" class="">With Google Analytics Real-Time reports, you can even see how many visitors are viewing your store at any given moment.  Real-Time reports allow you to see if a current promotion is driving more traffic to your store, the effects on store traffic from social media posts, traffic driven by content changes, and more, making Google Analytics virtually essential.</p><p id="e05b382e-c166-4a8d-b8fe-924364db4d8b" class="">
+</p><figure id="1abce551-8a13-4b5e-924f-9901587e43ac" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_1.png"><img style="width:1330px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_1.png"/></a></figure><p id="28db26b3-1342-4945-b4c8-aa24b93f6447" class="">
+</p><p id="1416e00b-de5d-4302-93ea-48e3d0616a76" class="">Google Analytics was launched in 2005 and was called Urchin. This was a software company that was popularly known as Urchin on Demand. After the acquisition, they continued selling the system under the same name for a few months. Then, they eventually developed into a better system called GA today. They upgraded to GA2 with the new version known as Classic launched in 2005.</p><p id="f01669f9-8e52-465e-a9d8-497cee7bb7ac" class="">Later in 2012, GA2 was upgraded to GA3 known as Universal Analytics. This version offered tracking codes for websites and features which could measure and evaluate user behavior. In 2020, Google announced GA4 its latest version of Google Analytics which will officially replace Universal Analytics on July 1, 2023. The GA4 analytics is a mechanism that helps brands and marketers track their interactions with customers across websites, mobile apps, and offline APIs.</p><h1 id="005bd19f-ad3a-4a32-9fa8-7fd80fe9b0c9" class=""><strong>How Google Analytics works</strong></h1><p id="8b32bc81-bffb-4ca6-b30a-9a604bd2174c" class="">Google Analytics is a platform that collects data from your websites and apps to create reports that provide insights into your business.</p><figure id="c7e6d525-ad9e-4c3a-90e2-b33824658c81" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Process_and_reporting_2.jpg"><img style="width:1499px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Process_and_reporting_2.jpg"/></a></figure><h3 id="c78a8b9b-707f-4109-9cc1-55d5e3080321" class=""><strong>Measuring a website</strong></h3><p id="75d8a153-a7d8-40f6-a0da-e1f09696d073" class="">To measure a website, you first have to create a Google Analytics account. Then you need to add a small piece of JavaScript measurement code to each page on your site. Every time a user visits a webpage, the tracking code will collect anonymous information about how that user interacted with the page.</p><p id="be443460-d77f-4733-91a1-0ed72c6cf6c4" class="">For the Google Store, the measurement code could show how many users visited a page that sells drinkware versus a page that sells houseware. Or it could tell us how many users bought an item like an Android doll by tracking whether they made it to the purchase confirmation page.</p><p id="3e8e3524-123a-4d2d-b436-3f1b858ab3fe" class="">The measurement code will also collect information from the browser like the language setting, the type of browser (such as Chrome or Safari), and the device and operating system on which the browser is running. It can even collect the “traffic source,” which is what brought users to the site in the first place. This might be a search engine, an advertisement they clicked on, or an email marketing campaign.</p><figure id="2b5e317e-ab06-4dce-b0a1-6d5c3dd4e135" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_10_-_JS_Code.png"><img style="width:936px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_10_-_JS_Code.png"/></a></figure><h3 id="dd79c5fd-4301-40df-9895-702f2f4f03b0" class=""><strong>Processing and reporting</strong></h3><p id="880b1886-ba29-4e70-9416-06078dc529e1" class="">When the measurement code collects data, it packages that information up and sends it to Google Analytics to be processed into reports. When Analytics processes data, it aggregates and organizes the data based on particular criteria like whether a user’s device is mobile or desktop, or which browser they’re using.</p><p id="4e33baed-acfc-45c5-9a8b-98e323178ac4" class="">But there are also configuration settings that allow you to customize how that data is processed. For example, you might want to apply a filter to make sure your data doesn’t include any internal company traffic or developer traffic. Once Analytics processes the data, it’s stored in a database where it can’t be changed.</p><p id="6f7000ee-5d8d-4def-b7c3-1f2f5da603c8" class="">So remember, when you set up your configuration, don’t exclude any data you think you might want to analyze later. Once the data has been processed and stored in the database, it will appear in Google Analytics as a report.</p><h1 id="1c8e48a0-79f8-4c3f-b865-140431db7d7a" class="">Where do I create a Google Analytics account?</h1><h3 id="075b1bee-8180-4322-8c8d-4faa6b1bc905" class="">Step 1: Create a Google account</h3><p id="4685dc8d-d78b-45d2-859f-07b0a03ec83f" class="">You require a valid Google account to register for Google Analytics. If you already use Google products, such as Gmail or Google Docs, then you can use the same account for Google Analytics. </p><p id="4e2a5611-a23c-4dcf-ab25-ad8ca553e6d8" class="">If you don’t already have an account, you will automatically receive a Google email address when you <a href="https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Faccounts.google.com%2FManageAccount&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp">create your Google account</a>.</p><h3 id="3adfdd22-50d2-4336-a416-80015ff3b5ed" class="">Step 2: Create a Google Analytics account</h3><ul id="c2da9cb9-56d4-4d7f-9140-d411b3873567" class="bulleted-list"><li style="list-style-type:disc">Visit <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> from your desktop. Make sure you are logged in with your Google account.</li></ul><ul id="83cbe56a-c47f-4a81-8d25-c5acd3bce347" class="bulleted-list"><li style="list-style-type:disc">Click on “<strong>Start measuring</strong>”. You will be led to the account setup steps.<figure id="37f2602f-f98e-46c1-be6e-b397ca55cf80" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_2.png"><img style="width:1333px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_2.png"/></a></figure></li></ul><ul id="33011524-dfda-49b2-969f-ad798d74a63f" class="bulleted-list"><li style="list-style-type:disc">Enter your <strong>account name/website name/app name</strong> depending on your preference. Scroll down and click on “<strong>Next</strong>”. You will be asked to enter your property details.<figure id="309d3d20-11f4-4fb8-a05f-e33c8d08aef1" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_3_-Setup.png"><img style="width:1339px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_3_-Setup.png"/></a></figure></li></ul><ul id="7a96fc2b-1ce4-456e-80cc-5c046549664c" class="bulleted-list"><li style="list-style-type:disc">Here, the <strong>property name</strong> indicates your <strong>website, or an app</strong> – whichever you want to track traffic from. Select the applicable<strong> reporting time zone</strong> and <strong>currency</strong>. <figure id="b3aa9357-dc5a-4b3d-8447-d6d5cef213ac" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_4_-_Property_a.png"><img style="width:1314px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_4_-_Property_a.png"/></a></figure><p id="6993b901-c72c-4676-8377-16d04142b6f8" class="">Here, in the <strong>advanced options</strong>, you will also get an option to set up <strong>Universal Analytics for your property</strong>. Enable it (Google creates GA4 properties by default). Click on “<strong>Next</strong>”.</p><figure id="7724170c-a596-4945-92cd-6d0b6b7d205e" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_4_-_Property_b.png"><img style="width:1314px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_4_-_Property_b.png"/></a></figure></li></ul><ul id="25a18f38-fe4e-45bf-80d9-2f0a08e71810" class="bulleted-list"><li style="list-style-type:disc">You will be asked to select your<strong> industry category, business size</strong> in the next step, and your <strong>purpose</strong> to use Google Analytics. Choose whichever is relevant to you.<figure id="9df19ce0-2858-46d2-bdfd-ddcc6d516ac8" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_5_-_Business_Details.png"><img style="width:1321px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/Screenshot_5_-_Business_Details.png"/></a></figure></li></ul><ul id="6924e073-b748-4c5b-af1a-0127ea3b0b85" class="bulleted-list"><li style="list-style-type:disc">Check both boxes to agree to Google Analytics Terms of Service, and click <strong>I Accept</strong>. Note that the terms of the service agreement will differ, depending on your country or region.</li></ul><ul id="92b83ed5-cfde-4975-ab12-e9326f87ef88" class="bulleted-list"><li style="list-style-type:disc">Copy the <strong>tracking ID</strong>. Note that you will not need to copy any code. It will look like this:<figure id="941252c9-c791-4c5e-8e9e-909c5abc8cc6" class="image" style="text-align:left"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/tracking_id.png"><img style="width:192px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/tracking_id.png"/></a></figure></li></ul><h3 id="a9642888-a78f-494d-a771-1c9fb67743a6" class="">Step 3: Turn on E-commerce tracking </h3><p id="b4577b32-c80a-40f4-b6d2-57d5ac370cd7" class="">You can implement Google&#x27;s E-commerce tracking at two different degrees of detail:</p><p id="2f8320b7-17cd-4cf3-a6c0-932f6e3c3086" class=""><strong>Basic E-commerce tracking</strong> if you just want transaction and revenue data</p><ul id="1fb3fc05-a2cd-4293-9bb0-985eea76a4e2" class="bulleted-list"><li style="list-style-type:disc">In your <a href="https://analytics.google.com/">Google Analytics</a> account, click <strong>Admin</strong>.</li></ul><ul id="2649da00-1c76-4b80-83bd-59553f0e16bc" class="bulleted-list"><li style="list-style-type:disc">In the <strong>View</strong> column, click <strong>E-commerce Settings</strong>.</li></ul><ul id="4ee96f0b-dd64-4b99-81db-6aa27a0d2f5a" class="bulleted-list"><li style="list-style-type:disc">Click the <strong>Enable E-commerce</strong> toggle to turn it from <strong>OFF</strong> to <strong>ON</strong>.</li></ul><figure id="5a00de92-9384-4d5d-aa9a-d0fa8fe0ec68" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/ecommerce_settings_b.png"><img style="width:1264px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/ecommerce_settings_b.png"/></a></figure><p id="671154d1-93a4-4390-8d66-8e4a21c648b6" class=""><strong>Enhanced E-commerce tracking</strong> if you want additional information about visitor behavior</p><ul id="b0eab4eb-6073-4fd8-a266-eee240a4500a" class="bulleted-list"><li style="list-style-type:disc">Repeat <strong>Basic E-commerce tracking </strong>steps 1 &amp; 2 </li></ul><ul id="f78ea9d1-ba21-44cc-8294-0b52086bab37" class="bulleted-list"><li style="list-style-type:disc">Click the <strong>Enable Enhanced E-commerce Reporting</strong> toggle to turn it from <strong>OFF</strong> to <strong>ON</strong>.</li></ul><ul id="b8c65f77-4567-4da3-8768-5bbd40a5a61c" class="bulleted-list"><li style="list-style-type:disc">Click <strong>Save</strong>. </li></ul><h1 id="59b8b453-66d3-4804-9bee-e8334625fbd7" class="">How Google Analytics is organized</h1><p id="5cb83658-3c76-4791-b585-2fe9c86045f1" class="">When you are setting up your Google account, it’s important to have a good understanding of the GA hierarchy:</p><div id="0a35407e-98d5-4355-9cd9-933348c8fb05" class="column-list"><div id="7b886c9b-5c6a-49a8-b558-bccd076eca6f" style="width:50%" class="column"><figure id="da9a068a-3439-4df2-839f-5a8888d4d8ef" class="image" style="text-align:left"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/GA_Hierarchy_a.png"><img style="width:700px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/GA_Hierarchy_a.png"/></a><figcaption>Source: Shoplazza Help Center</figcaption></figure><p id="1bf9ca8a-f4ae-44c6-af68-c18330f854e8" class="">
+</p></div><div id="8293b775-6000-44e1-8065-c255022ae332" style="width:50%" class="column"><figure id="72c1173b-6aab-490b-89e5-32a12706334f" class="image"><a href="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/GA_Hierarchy_b.png"><img style="width:720px" src="Google%20Analytics%20User%20Guide%20-%20Shoplazza%20Help%20Cente%20b5d81f2121a04d5f82f9f9202efad5ad/GA_Hierarchy_b.png"/></a><figcaption>Source: Shoplazza Help Center</figcaption></figure><p id="863069e6-82d1-489e-8e47-b6037206bcfc" class="">
+</p></div></div><ul id="f031fb20-d92e-4ae7-8bab-d254bd04476a" class="bulleted-list"><li style="list-style-type:disc"><strong>Organization (User’s Google account)</strong><p id="e185a040-4cda-4878-8501-2b00dcb42367" class="">An organization is the highest level of the hierarchy and represents the company. Both products and users are integrated into the organization. One organization can hold many GA accounts.</p></li></ul><ul id="d941855d-1ae9-4b80-ad9c-03d07fad3c76" class="bulleted-list"><li style="list-style-type:disc"><strong>Account</strong><p id="83853d0b-0812-42f1-96a1-3638aa90ac27" class="">An account is mandatory for using Google Analytics (it is your access point for Analytics). However, accounts do not strictly mean user accounts; you can assign one property to each account or assign multiple properties to one account. It is entirely up to the user to manage the relationship between the account and the properties.</p></li></ul><ul id="ed23a6ea-cecd-4f93-a477-adf31cd0ebbd" class="bulleted-list"><li style="list-style-type:disc"><strong>Property</strong><p id="21085d18-29c4-4d66-876e-f8600b6b86f2" class="">This represents the business website, mobile app, or device data you track. An account can contain one or more properties. Within an Analytics account, you add the properties from which you want to collect data. When you add a property to an account, Analytics generates the tracking code that you use to collect data from that property. The tracking code contains a unique ID that identifies the data from that property and makes it easily identifiable in your reports. Analytics also creates one unfiltered view for each property you add.</p></li></ul><ul id="d03c5673-3fe3-4f3f-90cd-357ec06594de" class="bulleted-list"><li style="list-style-type:disc"><strong>View</strong><p id="4705e766-aed4-4708-905c-7e6f7d78ae78" class="">A view is your access point for reports; a defined view of data from a property. You can grant access to users so that they can view various reports. A property contains one or more views.</p></li></ul><ul id="c5064e7c-04ef-43a7-9060-b3cf0a2d871f" class="bulleted-list"><li style="list-style-type:disc"><strong>Users and permissions</strong><p id="264d0d7c-471a-4c11-8997-9dd0b1610cbd" class="">You can add users to an Analytics account. You can add those users at the account, property, or view level; and you can restrict their access at each level. When you add a user, you identify that person by an email address that is registered in Google accounts, and you assign the appropriate permissions.</p></li></ul><p id="ed51db54-682e-41a1-8bb6-d3a0517928d4" class="">
+</p><p id="264d63f6-99b1-4cb1-8aed-cd667673c707" class="">Well, now you know how to use Google Analytics and which pages are the most important for you to know. if you want to know about any of the other pages go ahead and <a href="https://support.google.com/analytics/answer/12159453?visit_id=638025787126703762-1210688557&amp;hl=en&amp;rd=1">explore them</a>!</p><p id="3a074eb4-9269-4160-9e67-771ef2d5ecee" class="">Also, you can learn about how to set up other things on Google Analytics including setting up goals that can message you when you get a certain number of people or even tell you what internet service provider your visitors are using.</p><p id="36afbd7c-70eb-4d3b-91ff-58be4cc8df5d" class="">
+</p><p id="7a33a7d5-14b9-4cae-94a7-2d01c7787b41" class=""><em>Tell us in the comments below about how you feel about this article. How are you planning to adapt Google Analytics in your website or mobile app?</em></p><p id="dea4f749-b5cf-4df8-872f-ba5c60e86f53" class="">
+</p><p id="cbcf4f85-52c9-4fbe-a6d9-361c4f58a659" class="">
+</p><p id="f03c889e-e4a9-4866-a0a1-6f6adf9c671a" class="">Author: Larry Ajana</p><p id="f6ed99dd-dba4-47ff-abda-feb68224ff37" class="">Larry is a collaborative, innovative, and customer-focused IT Professional with 4+ years of experience providing strategic support to teams and clients in customer management, web development, and cloud engineering. He is passionate about using technology to create simple solutions to complex challenges, build strong customer relationships, drive brand loyalty, and increase customer engagement. </p><p id="3445eb78-733b-4e39-8f9a-815954383166" class="">
+</p></div></article></body></html>
